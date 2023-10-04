@@ -162,35 +162,3 @@ zaznamy_pacientov = [
 zaznamy(5) = [];
 
 %%Pridajte pole: pocet deti
-pacient = struct('meno', '', 'priezvisko', '', 'vek', 0, 'vyska', 0.0, 'hmotnost', 0.0, 'pocet_deti', 0);
-
-zaznamy_pacientov = [
-    struct('meno', 'Janko', 'priezvisko', 'Hrasko', 'vek', 30, 'vyska', 180.0, 'hmotnost', 75.5, 'pocet_deti', 3),
-    struct('meno', 'Jozko', 'priezvisko', 'Vajda', 'vek', 25, 'vyska', 165.0, 'hmotnost', 60.0, 'pocet_deti', 2),
-    struct('meno', 'Jozko', 'priezvisko', 'Procko', 'vek', 44, 'vyska', 190.0, 'hmotnost', 100.0, 'pocet_deti', 0),
-    struct('meno', 'Iveta', 'priezvisko', 'Radicova', 'vek', 52, 'vyska', 160.0, 'hmotnost', 55.0,'pocet_deti', 1),
-    struct('meno', 'Boris', 'priezvisko', 'Kolla', 'vek', 55, 'vyska', 170.0, 'hmotnost', 89.0, 'pocet_deti', 12),
-    struct('meno', 'Kvetka', 'priezvisko', 'Horvatova', 'vek', 40, 'vyska', 155.0, 'hmotnost', 58.0, 'pocet_deti', 0),
-    struct('meno', 'Robert', 'priezvisko', 'Fico', 'vek', 58, 'vyska', 185.0, 'hmotnost', 99.0,'pocet_deti', 1)
-];
-
-%%Vypíšte zoznam všetkých polí štruktúry
-display(fieldnames(zaznamy_pacientov(1)));
-
-%%Odstránte pole vek
-for i = 1:length(zaznamy_pacientov)
-    zaznamy_pacientov(i).vek = 0;
-end
-
-%%Pridajte pole test. Každému pacientovi priraďte do tohto poľa pole 3 nádodne generovaných čísel od 0 po 2.
-pacient = struct('meno', '', 'priezvisko', '', 'vek', 0, 'vyska', 0.0, 'hmotnost', 0.0, 'pocet_deti', 0, 'testArray', []);
-
-zaznamy_pacientov = [
-    struct('meno', 'Janko', 'priezvisko', 'Hrasko', 'vek', 30, 'vyska', 180.0, 'hmotnost', 75.5, 'pocet_deti', 3, 'testArray', randi([0, 2], 1, 3)),
-    struct('meno', 'Jozko', 'priezvisko', 'Vajda', 'vek', 25, 'vyska', 165.0, 'hmotnost', 60.0, 'pocet_deti', 2, 'testArray', randi([0, 2], 1, 3)),
-    struct('meno', 'Jozko', 'priezvisko', 'Procko', 'vek', 44, 'vyska', 190.0, 'hmotnost', 100.0, 'pocet_deti', 0, 'testArray', randi([0, 2], 1, 3)),
-    struct('meno', 'Iveta', 'priezvisko', 'Radicova', 'vek', 52, 'vyska', 160.0, 'hmotnost', 55.0,'pocet_deti', 1, 'testArray', randi([0, 2], 1, 3)),
-    struct('meno', 'Boris', 'priezvisko', 'Kolla', 'vek', 55, 'vyska', 170.0, 'hmotnost', 89.0, 'pocet_deti', 12, 'testArray', randi([0, 2], 1, 3)),
-    struct('meno', 'Kvetka', 'priezvisko', 'Horvatova', 'vek', 40, 'vyska', 155.0, 'hmotnost', 58.0, 'pocet_deti', 0, 'testArray',  randi([0, 2], 1, 3)),
-    struct('meno', 'Robert', 'priezvisko', 'Fico', 'vek', 58, 'vyska', 185.0, 'hmotnost', 99.0,'pocet_deti', 1, 'testArray',  randi([0, 2], 1, 3))
-];
